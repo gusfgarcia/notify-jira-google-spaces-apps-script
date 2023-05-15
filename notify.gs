@@ -44,18 +44,24 @@ function sendCardMessageWithLinkInGoogleChat(url) {
       // this if here you can use your own customfield or some field you want.
     
              if(data.issues[i].fields.customfield_12345 != null){
-            var tagus = data.issues[i].fields.customfield_12345.value;
+            var YOURCUSTOMFIELD1 = data.issues[i].fields.customfield_12345.value;
             } else{
               var YOURCUSTOMFIELD1 = "";
             } 
+          
+             if(data.issues[i].fields.customfield_12345 != null){
+            var YOURCUSTOMFIELD2 = data.issues[i].fields.customfield_12345.value;
+            } else{
+              var YOURCUSTOMFIELD2 = "";
+            } 
 
-          SendToChat(key, summary, YOURCUSTOMFIELD1)
+          SendToChat(key, summary, YOURCUSTOMFIELD1, YOURCUSTOMFIELD2)
 
         }
         n = t * 50;
     }
 
-    function SendToChat(key, summary, YOURCUSTOMFIELD1) {
+    function SendToChat(key, summary, YOURCUSTOMFIELD1, YOURCUSTOMFIELD2) {
 
        const payload = JSON.stringify({
         "cards": [{
@@ -68,8 +74,8 @@ function sendCardMessageWithLinkInGoogleChat(url) {
             "sections": [{
                 "widgets": [{
                     "textParagraph": {
-                        "text": "<b>Custom Field 1:<b> " + YOURCUSTOMFIELD1 +
-                            "<br>" + "<b>Triage Response Time Remaining:<b> " + YOURCUSTOMFIELD2,
+                        "text": "<b>Field:<b> " + YOURCUSTOMFIELD1 +
+                            "<br>" + "<b>Field:<b> " + YOURCUSTOMFIELD2,
 
                     }
 
