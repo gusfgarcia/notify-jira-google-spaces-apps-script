@@ -1,4 +1,4 @@
-function sendCardMessageWithLinkInGoogleChat(url) {
+function notifyjira(url) {
 
   var username = 'your.address@here.com';
   var password = 'pwd';
