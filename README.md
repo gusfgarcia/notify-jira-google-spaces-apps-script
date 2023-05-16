@@ -4,8 +4,7 @@
 
 * Using apps script google to notify changes in tickets from jira with api.
 
-* Hello, to accomplish this, you will need to create a space in google chat, or a conversation and create a webhook.
+Hello, to accomplish this, you will need to create a space in google chat, or a conversation and create a webhook.
+Have access to google apps script and have a jira api available.
 
-* Have access to google apps script and have a jira api available.
-
-* Thx!
+Thx! 🙏
